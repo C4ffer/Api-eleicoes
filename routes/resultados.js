@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
             var dataCandidatos = await ModelCandidatos.find({ numero: numerosVotados[i], cargo: req.params.id });
             //console.log(dataCandidatos[0])
             if (dataCandidatos[0] === undefined) {
-                nulos += 1
+                nulos += contagem[numerosVotados[i]]
             }
             else {
                 console.log("DEBUG: dataCandidatos")
